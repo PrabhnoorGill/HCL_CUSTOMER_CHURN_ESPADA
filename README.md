@@ -7,7 +7,7 @@ All analysis is contained within a single Google Colab notebook, covering explor
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 DATASET
 
-The dataset includes 7043 customers with features like Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn label.
+The dataset includes 7043 customers with features like Age, Gender, Usage Frequency, SubscriptionType, Complaints, and a Churn label.
 Churn is intentionally imbalanced (~30%).
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 NOTEBOOK
@@ -123,5 +123,6 @@ KEY HIGHLIGHTS
 -Model comparison (Logistic Regression, Random Forest, XGBoost)
 
 -Clear and interpretable metric-based evaluation
+![WhatsApp Image 2025-11-18 at 14 22 20_5e373523](https://github.com/user-attachments/assets/19838bd7-e123-4d7d-90c6-9fd302631284)
 
 

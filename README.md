@@ -1,95 +1,88 @@
-HCL_CUSTOMER_CHURN_ESPADA
+# HCL_CUSTOMER_CHURN_ESPADA
+A simple, end-to-end project that predicts customer churn using a small, imbalanced dataset. The Colab notebook includes all steps—EDA, preprocessing, handling imbalance, training models, and evaluating them with metrics like ROC-AUC. 
 
-A simple, end-to-end customer churn prediction project built using an imbalanced dataset. The entire workflow—EDA, preprocessing, imbalance handling, model training, and evaluation—is implemented in one Google Colab notebook.
+This project provides an end-to-end workflow for predicting customer churn using a structured dataset of 1,000 records. The dataset includes demographic, usage, and behavioral attributes such as Age, Gender, Usage Frequency, SubscriptionType, Complaints, and a Churn flag. The churn distribution is deliberately imbalanced (≈30%), reflecting a realistic business scenario.
 
-This project uses ~7,000 customer records with demographic, usage, and behavioral features such as Age, Gender, Usage Frequency, SubscriptionType, Complaints, and Churn. The churn rate is intentionally imbalanced (~30%) to reflect real business scenarios.
+All analysis is contained within a single Google Colab notebook, covering exploratory data analysis, preprocessing, imbalance handling, model training, and performance evaluation. Models are assessed using ROC-AUC, precision, recall, and F1-score to ensure balanced measurement beyond accuracy.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+DATASET
 
-Dataset
+The dataset includes 7043 customers with features like Age, Gender, Usage Frequency, SubscriptionType, Complaints, and a Churn label.
+Churn is intentionally imbalanced (~30%).
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTEBOOK
 
-~7043 customer entries
+EDA
 
-Features: Age, Gender, Usage Frequency, SubscriptionType, Complaints
+Imbalance handling
 
-Target: Churn
+Logistic Regression / Random Forest / XGBoost
 
-Churn imbalance: ~30%
-
-Notebook Contents
-
-Exploratory Data Analysis (EDA)
-
-Handling class imbalance
-
-Model training: Logistic Regression, Random Forest, XGBoost
-
-Evaluation using ROC-AUC, Precision, Recall, F1-score, PR-AUC
+ROC-AUC, Precision, Recall, F1-score
 
 Final model comparison
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+EXPLORATORY DATA ANALYSIS (EDA):
 
-Exploratory Data Analysis (EDA)
-Includes:
+EDA includes:
 
-Missing value analysis
+Missing-values analysis
 
 Class distribution
 
 Statistical summary
 
-Numeric feature distributions
-
-Categorical feature breakdown
+Distributions of numeric variables
 
 Correlation matrix
 
-Churn-wise feature comparison
+Churn vs. key features analysis
 
-Correlation Matrix
+Plots:
 
-Visualizations:
+Histograms, boxplots
 
-Histograms
-
-Boxplots
-
-Bar charts
+Bar plots for categorical features
 
 Heatmap
 
-Data Cleaning & Preprocessing
+Churn breakdown per feature and Data Cleaning & Preprocessing
+
+Steps include:
 
 Handling missing values
 
-Outlier treatment (IQR/Winsorization)
+Outlier treatment (Winsorization or IQR capping)
 
-One-hot encoding for categorical variables
+One-hot encoding for categorical features
 
-Binary encoding for Gender
+Scaling numeric features (StandardScaler)
 
-Scaling numerical features using StandardScaler
+Train/test split (stratified)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+FEATURE ENGINEERING
 
-Stratified train/test split
+One-hot encoding of SubscriptionType
 
-Feature Engineering
-
-One-hot encoded SubscriptionType
-
-Binary Gender encoding
+Binary encoding Gender
 
 Derived feature: AvgUsagePerTransaction
 
-Handling Imbalance
+HANDLING IMBALANCE
 
-Since churn is ~30%, the following techniques were used:
+Since churn ≈ 30%, the dataset is imbalanced.
 
-class_weight='balanced'
+Techniques used:
 
-Random Oversampling
+Class weights (class_weight='balanced')
 
-Random Undersampling
+Random Oversampling / Undersampling
 
-SMOTE
+SMOTE(Synthetic Minority Oversampling)
 
-Models Used
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+AI MODELS
 
 Logistic Regression
 
@@ -97,7 +90,9 @@ Random Forest
 
 XGBoost
 
-Evaluation Metrics
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Criteria:
 
 ROC-AUC
 
@@ -105,28 +100,29 @@ Precision, Recall, F1-score
 
 PR-AUC
 
-Confusion Matrix
+Confusion matrix
 
-ROC Curve Comparison
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+HOW TO USE
 
-Confusion Matrix (XGBoost)
+-Open the Colab notebook.
 
-How to Use
+-Upload the dataset.
 
-Open the Colab notebook.
+-Execute the notebook sequentially to view the EDA and the performance metrics 
 
-Upload the dataset.
 
-Run all cells step-by-step.
 
-Review EDA, preprocessing outputs, ROC curves, and model performance.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+KEY HIGHLIGHTS
 
-Key Highlights
+-Complete churn-prediction pipeline in one notebook
 
-Complete churn prediction pipeline in one notebook
+-Practical treatment of imbalanced data
 
-Practical handling of imbalanced data
+-Model comparison (Logistic Regression, Random Forest, XGBoost)
 
-Comparison of Logistic Regression, Random Forest, XGBoost
+-Clear and interpretable metric-based evaluation
+![WhatsApp Image 2025-11-18 at 14 22 20_5e373523](https://github.com/user-attachments/assets/19838bd7-e123-4d7d-90c6-9fd302631284)
 
-Clear, interpretable evaluation metrics
+

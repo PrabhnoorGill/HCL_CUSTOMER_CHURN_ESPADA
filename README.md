@@ -4,12 +4,12 @@ A simple, end-to-end project that predicts customer churn using a small, imbalan
 This project provides an end-to-end workflow for predicting customer churn using a structured dataset of 1,000 records. The dataset includes demographic, usage, and behavioral attributes such as Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn flag. The churn distribution is deliberately imbalanced (≈30%), reflecting a realistic business scenario.
 
 All analysis is contained within a single Google Colab notebook, covering exploratory data analysis, preprocessing, imbalance handling, model training, and performance evaluation. Models are assessed using ROC-AUC, precision, recall, and F1-score to ensure balanced measurement beyond accuracy.
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 DATASET
 
 The dataset includes 1,000 customers with features like Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn label.
 Churn is intentionally imbalanced (~30%).
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 NOTEBOOK
 
 All analysis and models are inside
@@ -25,7 +25,7 @@ Logistic Regression / Random Forest / XGBoost
 ROC-AUC, Precision, Recall, F1-score
 
 Final model comparison
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 EXPLORATORY DATA ANALYSIS (EDA):
 
 EDA includes:
@@ -50,8 +50,7 @@ Bar plots for categorical features
 
 Heatmap
 
-Churn breakdown per feature
-5. Data Cleaning & Preprocessing
+Churn breakdown per feature and Data Cleaning & Preprocessing
 
 Steps include:
 
@@ -64,7 +63,7 @@ One-hot encoding for categorical features
 Scaling numeric features (StandardScaler)
 
 Train/test split (stratified)
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 FEATURE ENGINEERING
 
 One-hot encoding of SubscriptionType
@@ -83,10 +82,11 @@ Class weights (class_weight='balanced')
 
 Random Oversampling / Undersampling
 
-SMOTE (Synthetic Minority Oversampling Technique)
-8. Modeling
+SMOTE(Synthetic Minority Oversampling)
 
-MODELS
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+AI MODELS
 
 Logistic Regression
 
@@ -94,6 +94,8 @@ Random Forest
 
 XGBoost
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 Criteria:
 
 ROC-AUC
@@ -104,16 +106,18 @@ PR-AUC
 
 Confusion matrix
 
-Recall-focused threshold tuning
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 HOW TO USE
 
 -Open the Colab notebook.
 
 -Upload the dataset.
 
--Execute the notebook sequentially to view EDA, modeling steps, and final evaluation.
+-Execute the notebook sequentially to view the EDA and the performance metrics 
 
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
 KEY HIGHLIGHTS
 
 -Complete churn-prediction pipeline in one notebook

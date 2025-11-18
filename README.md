@@ -1,88 +1,95 @@
-# HCL_CUSTOMER_CHURN_ESPADA
-A simple, end-to-end project that predicts customer churn using a small, imbalanced dataset. The Colab notebook includes all steps—EDA, preprocessing, handling imbalance, training models, and evaluating them with metrics like ROC-AUC. 
+HCL_CUSTOMER_CHURN_ESPADA
 
-This project provides an end-to-end workflow for predicting customer churn using a structured dataset of 1,000 records. The dataset includes demographic, usage, and behavioral attributes such as Age, Gender, Usage Frequency, SubscriptionType, Complaints, and a Churn flag. The churn distribution is deliberately imbalanced (≈30%), reflecting a realistic business scenario.
+A simple, end-to-end customer churn prediction project built using an imbalanced dataset. The entire workflow—EDA, preprocessing, imbalance handling, model training, and evaluation—is implemented in one Google Colab notebook.
 
-All analysis is contained within a single Google Colab notebook, covering exploratory data analysis, preprocessing, imbalance handling, model training, and performance evaluation. Models are assessed using ROC-AUC, precision, recall, and F1-score to ensure balanced measurement beyond accuracy.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-DATASET
+This project uses ~7,000 customer records with demographic, usage, and behavioral features such as Age, Gender, Usage Frequency, SubscriptionType, Complaints, and Churn. The churn rate is intentionally imbalanced (~30%) to reflect real business scenarios.
 
-The dataset includes 7043 customers with features like Age, Gender, Usage Frequency, SubscriptionType, Complaints, and a Churn label.
-Churn is intentionally imbalanced (~30%).
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-NOTEBOOK
+Dataset
 
-EDA
+~7043 customer entries
 
-Imbalance handling
+Features: Age, Gender, Usage Frequency, SubscriptionType, Complaints
 
-Logistic Regression / Random Forest / XGBoost
+Target: Churn
 
-ROC-AUC, Precision, Recall, F1-score
+Churn imbalance: ~30%
+
+Notebook Contents
+
+Exploratory Data Analysis (EDA)
+
+Handling class imbalance
+
+Model training: Logistic Regression, Random Forest, XGBoost
+
+Evaluation using ROC-AUC, Precision, Recall, F1-score, PR-AUC
 
 Final model comparison
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-EXPLORATORY DATA ANALYSIS (EDA):
 
-EDA includes:
+Exploratory Data Analysis (EDA)
+Includes:
 
-Missing-values analysis
+Missing value analysis
 
 Class distribution
 
 Statistical summary
 
-Distributions of numeric variables
+Numeric feature distributions
+
+Categorical feature breakdown
 
 Correlation matrix
 
-Churn vs. key features analysis
+Churn-wise feature comparison
 
-Plots:
+Correlation Matrix
 
-Histograms, boxplots
+Visualizations:
 
-Bar plots for categorical features
+Histograms
+
+Boxplots
+
+Bar charts
 
 Heatmap
 
-Churn breakdown per feature and Data Cleaning & Preprocessing
-
-Steps include:
+Data Cleaning & Preprocessing
 
 Handling missing values
 
-Outlier treatment (Winsorization or IQR capping)
+Outlier treatment (IQR/Winsorization)
 
-One-hot encoding for categorical features
+One-hot encoding for categorical variables
 
-Scaling numeric features (StandardScaler)
+Binary encoding for Gender
 
-Train/test split (stratified)
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-FEATURE ENGINEERING
+Scaling numerical features using StandardScaler
 
-One-hot encoding of SubscriptionType
+Stratified train/test split
 
-Binary encoding Gender
+Feature Engineering
+
+One-hot encoded SubscriptionType
+
+Binary Gender encoding
 
 Derived feature: AvgUsagePerTransaction
 
-HANDLING IMBALANCE
+Handling Imbalance
 
-Since churn ≈ 30%, the dataset is imbalanced.
+Since churn is ~30%, the following techniques were used:
 
-Techniques used:
+class_weight='balanced'
 
-Class weights (class_weight='balanced')
+Random Oversampling
 
-Random Oversampling / Undersampling
+Random Undersampling
 
-SMOTE(Synthetic Minority Oversampling)
+SMOTE
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-AI MODELS
+Models Used
 
 Logistic Regression
 
@@ -90,9 +97,7 @@ Random Forest
 
 XGBoost
 
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-Criteria:
+Evaluation Metrics
 
 ROC-AUC
 
@@ -100,29 +105,28 @@ Precision, Recall, F1-score
 
 PR-AUC
 
-Confusion matrix
+Confusion Matrix
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-HOW TO USE
+ROC Curve Comparison
 
--Open the Colab notebook.
+Confusion Matrix (XGBoost)
 
--Upload the dataset.
+How to Use
 
--Execute the notebook sequentially to view the EDA and the performance metrics 
+Open the Colab notebook.
 
+Upload the dataset.
 
+Run all cells step-by-step.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-KEY HIGHLIGHTS
+Review EDA, preprocessing outputs, ROC curves, and model performance.
 
--Complete churn-prediction pipeline in one notebook
+Key Highlights
 
--Practical treatment of imbalanced data
+Complete churn prediction pipeline in one notebook
 
--Model comparison (Logistic Regression, Random Forest, XGBoost)
+Practical handling of imbalanced data
 
--Clear and interpretable metric-based evaluation
-![WhatsApp Image 2025-11-18 at 14 22 20_5e373523](https://github.com/user-attachments/assets/19838bd7-e123-4d7d-90c6-9fd302631284)
+Comparison of Logistic Regression, Random Forest, XGBoost
 
-
+Clear, interpretable evaluation metrics

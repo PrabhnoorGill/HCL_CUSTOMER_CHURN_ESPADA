@@ -7,14 +7,10 @@ All analysis is contained within a single Google Colab notebook, covering explor
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 DATASET
 
-The dataset includes 1,000 customers with features like Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn label.
+The dataset includes 7043 customers with features like Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn label.
 Churn is intentionally imbalanced (~30%).
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 NOTEBOOK
-
-All analysis and models are inside
-churn_analysis.ipynb
-including:
 
 EDA
 

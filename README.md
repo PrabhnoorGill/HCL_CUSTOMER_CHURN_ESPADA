@@ -5,6 +5,107 @@ This project provides an end-to-end workflow for predicting customer churn using
 
 All analysis is contained within a single Google Colab notebook, covering exploratory data analysis, preprocessing, imbalance handling, model training, and performance evaluation. Models are assessed using ROC-AUC, precision, recall, and F1-score to ensure balanced measurement beyond accuracy.
 
+DATASET
+
+The dataset includes 1,000 customers with features like Age, Gender, MonthlyUsageHours, NumTransactions, SubscriptionType, Complaints, and a Churn label.
+Churn is intentionally imbalanced (~30%).
+
+NOTEBOOK
+
+All analysis and models are inside
+churn_analysis.ipynb
+including:
+
+EDA
+
+Imbalance handling
+
+Logistic Regression / Random Forest / XGBoost
+
+ROC-AUC, Precision, Recall, F1-score
+
+Final model comparison
+
+EXPLORATORY DATA ANALYSIS (EDA):
+
+EDA includes:
+
+Missing-values analysis
+
+Class distribution
+
+Statistical summary
+
+Distributions of numeric variables
+
+Correlation matrix
+
+Churn vs. key features analysis
+
+Plots:
+
+Histograms, boxplots
+
+Bar plots for categorical features
+
+Heatmap
+
+Churn breakdown per feature
+5. Data Cleaning & Preprocessing
+
+Steps include:
+
+Handling missing values
+
+Outlier treatment (Winsorization or IQR capping)
+
+One-hot encoding for categorical features
+
+Scaling numeric features (StandardScaler)
+
+Train/test split (stratified)
+
+FEATURE ENGINEERING
+
+One-hot encoding of SubscriptionType
+
+Binary encoding Gender
+
+Derived feature: AvgUsagePerTransaction
+
+HANDLING IMBALANCE
+
+Since churn ≈ 30%, the dataset is imbalanced.
+
+Techniques used:
+
+Class weights (class_weight='balanced')
+
+Random Oversampling / Undersampling
+
+SMOTE (Synthetic Minority Oversampling Technique)
+8. Modeling
+
+MODELS
+
+Logistic Regression
+
+Random Forest
+
+XGBoost
+
+Criteria:
+
+ROC-AUC
+
+Precision, Recall, F1-score
+
+PR-AUC
+
+Confusion matrix
+
+Recall-focused threshold tuning
+
 HOW TO USE
 
 -Open the Colab notebook.
@@ -13,20 +114,14 @@ HOW TO USE
 
 -Execute the notebook sequentially to view EDA, modeling steps, and final evaluation.
 
-Key Highlights
+KEY HIGHLIGHTS
 
-Complete churn-prediction pipeline in one notebook
+-Complete churn-prediction pipeline in one notebook
 
-Practical treatment of imbalanced data
+-Practical treatment of imbalanced data
 
-Model comparison (Logistic Regression, Random Forest, XGBoost)
+-Model comparison (Logistic Regression, Random Forest, XGBoost)
 
-Clear and interpretable metric-based evaluation
+-Clear and interpretable metric-based evaluation
 
-Future Enhancements
 
-Incorporation of explainability techniques (e.g., SHAP)
-
-Advanced hyperparameter tuning
-
-Optional API-based deployment

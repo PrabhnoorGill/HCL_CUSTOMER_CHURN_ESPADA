@@ -124,5 +124,9 @@ KEY HIGHLIGHTS
 
 -Clear and interpretable metric-based evaluation
 ![WhatsApp Image 2025-11-18 at 14 22 20_5e373523](https://github.com/user-attachments/assets/19838bd7-e123-4d7d-90c6-9fd302631284)
+<img width="775" height="686" alt="image" src="https://github.com/user-attachments/assets/9ab919d9-0677-482d-93be-29a0eb70caed" />
+
+<img width="701" height="556" alt="image" src="https://github.com/user-attachments/assets/0456eb19-9cbb-4269-a380-f6dba1bb8fbc" />
+<img width="388" height="325" alt="image" src="https://github.com/user-attachments/assets/27f4d297-8274-422d-85a8-82e62730f945" />
 
 
